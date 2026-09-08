@@ -24,7 +24,7 @@ export default function ProjectCarousel() {
         </span>
       </div>
 
-      <div className="relative mt-8 min-h-[26rem] overflow-hidden">
+      <div className="relative mt-8 min-h-[26rem] overflow-hidden rounded-2xl">
         <AnimatePresence mode="wait" custom={direction} initial={false}>
           <motion.article
             key={project.slug}
@@ -33,19 +33,28 @@ export default function ProjectCarousel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction >= 0 ? -40 : 40 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="border border-ink/15 p-8"
+            style={{ backgroundColor: project.tint, borderColor: project.accent }}
+            className="rounded-2xl border-2 p-8"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <span className="font-sans text-xs text-slate">{project.category}</span>
+              <span
+                style={{ color: project.accent }}
+                className="font-sans text-xs font-semibold uppercase tracking-wide"
+              >
+                {project.category}
+              </span>
               {project.metric && (
-                <span className="border border-amber/60 px-2.5 py-1 font-sans text-xs text-amber">
+                <span
+                  style={{ backgroundColor: project.accent }}
+                  className="rounded-full px-3 py-1 font-sans text-xs font-medium text-white shadow-sm"
+                >
                   {project.metric}
                 </span>
               )}
             </div>
 
             <h3 className="mt-4 font-display text-2xl text-ink">{project.title}</h3>
-            <p className="mt-3 max-w-[65ch] font-sans text-[0.95rem] leading-relaxed text-ink/70">
+            <p className="mt-3 max-w-[65ch] font-sans text-[0.95rem] leading-relaxed text-ink/75">
               {project.summary}
             </p>
             <p className="mt-4 max-w-[65ch] font-sans text-[0.9rem] leading-relaxed text-ink/60">
@@ -56,20 +65,22 @@ export default function ProjectCarousel() {
               {project.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="border border-ink/15 px-2.5 py-1 font-sans text-xs text-ink/70"
+                  style={{ borderColor: project.accent, color: project.accent }}
+                  className="rounded-full border bg-white/70 px-3 py-1 font-sans text-xs font-medium"
                 >
                   {tech}
                 </span>
               ))}
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-5 font-sans text-sm">
+            <div className="mt-6 flex flex-wrap gap-5 font-sans text-sm font-medium">
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blueprint underline decoration-amber decoration-2 underline-offset-4 hover:text-blueprint/70"
+                  style={{ color: project.accent }}
+                  className="underline decoration-2 underline-offset-4 hover:opacity-70"
                 >
                   Live site
                 </a>
@@ -79,7 +90,8 @@ export default function ProjectCarousel() {
                   href={project.codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blueprint underline decoration-amber decoration-2 underline-offset-4 hover:text-blueprint/70"
+                  style={{ color: project.accent }}
+                  className="underline decoration-2 underline-offset-4 hover:opacity-70"
                 >
                   Source code
                 </a>
@@ -96,7 +108,8 @@ export default function ProjectCarousel() {
         <button
           onClick={() => go(-1)}
           aria-label="Previous project"
-          className="flex h-10 w-10 items-center justify-center border border-ink/20 text-ink transition hover:border-amber hover:text-amber"
+          style={{ borderColor: project.accent, color: project.accent }}
+          className="flex h-10 w-10 items-center justify-center rounded-full border-2 bg-white transition hover:scale-105"
         >
           ←
         </button>
@@ -110,9 +123,8 @@ export default function ProjectCarousel() {
                 setIndex(i);
               }}
               aria-label={`Go to ${p.title}`}
-              className={`h-1.5 w-6 transition ${
-                i === index ? "bg-amber" : "bg-ink/15"
-              }`}
+              style={{ backgroundColor: i === index ? p.accent : "#E5E7EB" }}
+              className="h-2.5 w-2.5 rounded-full transition-all"
             />
           ))}
         </div>
@@ -120,7 +132,8 @@ export default function ProjectCarousel() {
         <button
           onClick={() => go(1)}
           aria-label="Next project"
-          className="flex h-10 w-10 items-center justify-center border border-ink/20 text-ink transition hover:border-amber hover:text-amber"
+          style={{ borderColor: project.accent, color: project.accent }}
+          className="flex h-10 w-10 items-center justify-center rounded-full border-2 bg-white transition hover:scale-105"
         >
           →
         </button>

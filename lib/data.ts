@@ -8,6 +8,8 @@ export interface Project {
   liveUrl?: string;
   codeUrl?: string;
   metric?: string;
+  accent: string;
+  tint: string;
 }
 
 export const projects: Project[] = [
@@ -23,6 +25,8 @@ export const projects: Project[] = [
     liveUrl: "https://med-rag-assistant.netlify.app/",
     codeUrl: "https://github.com/ctrl-md/medical-rag-assistant",
     metric: "TF-IDF built from scratch",
+    accent: "#6366F1",
+    tint: "#EEF2FF",
   },
   {
     slug: "asl-translator",
@@ -45,6 +49,8 @@ export const projects: Project[] = [
     ],
     codeUrl: "https://github.com/ctrl-md/american-sign-language-translator",
     metric: "63-feature real-time landmark pipeline",
+    accent: "#EC4899",
+    tint: "#FDF2F8",
   },
   {
     slug: "gpt-from-scratch",
@@ -58,6 +64,8 @@ export const projects: Project[] = [
     codeUrl:
       "https://github.com/ctrl-md/ai-engineer-journey/blob/main/phase-3-transformers/week_17_gpt_training_generation.py",
     metric: "Built from backprop up",
+    accent: "#F59E0B",
+    tint: "#FFFBEB",
   },
   {
     slug: "clinical-nlp",
@@ -71,6 +79,8 @@ export const projects: Project[] = [
     codeUrl:
       "https://github.com/ctrl-md/ai-engineer-journey/blob/main/phase-8-capstone/weeks_37_38_clinical_entity_extraction.py",
     metric: "Hand-annotated ground truth",
+    accent: "#10B981",
+    tint: "#ECFDF5",
   },
   {
     slug: "clinical-paper-reproduction",
@@ -84,6 +94,8 @@ export const projects: Project[] = [
     codeUrl:
       "https://github.com/ctrl-md/ai-engineer-journey/blob/main/phase-7-research/weeks_33_34_mortality_cnn_reproduction.py",
     metric: "0.82 AUC reproduced",
+    accent: "#0EA5E9",
+    tint: "#F0F9FF",
   },
   {
     slug: "rave",
@@ -96,6 +108,8 @@ export const projects: Project[] = [
     stack: ["React Native", "Expo", "Node.js", "Express", "Prisma", "PostgreSQL", "Next.js"],
     codeUrl: "https://github.com/ctrl-md/food-delivery",
     metric: "4 independent apps, 1 shared API",
+    accent: "#F97316",
+    tint: "#FFF7ED",
   },
   {
     slug: "poseidon-forum",
@@ -108,6 +122,8 @@ export const projects: Project[] = [
     stack: ["FastAPI", "SQLAlchemy", "Alembic", "Vue 3", "Pinia", "Tailwind CSS"],
     codeUrl: "https://github.com/ctrl-md/forum",
     metric: "Hot-ranking feed algorithm",
+    accent: "#14B8A6",
+    tint: "#F0FDFA",
   },
   {
     slug: "gallery",
@@ -120,6 +136,8 @@ export const projects: Project[] = [
     stack: ["Flask", "SQLAlchemy", "JWT", "React", "Vite", "Tailwind CSS", "Cloudinary"],
     codeUrl: "https://github.com/ctrl-md/gallery",
     metric: "Direct-to-cloud upload",
+    accent: "#A855F7",
+    tint: "#FAF5FF",
   },
 ];
 
