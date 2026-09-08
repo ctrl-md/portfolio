@@ -10,7 +10,7 @@ const categoryColors: Record<string, string> = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-blueprint/[0.03] py-24">
+    <section id="skills" className="bg-ink/[0.03] py-24">
       <div className="mx-auto max-w-3xl px-6">
         <h2 className="font-display text-3xl text-ink">Skills</h2>
         <div className="mt-10 space-y-6">
@@ -32,7 +32,7 @@ export default function Skills() {
                     <span
                       key={item}
                       style={{ borderColor: color, color }}
-                      className="rounded-full border bg-white px-2.5 py-1 font-sans text-xs"
+                      className="rounded-full border bg-surface px-2.5 py-1 font-sans text-xs"
                     >
                       {item}
                     </span>

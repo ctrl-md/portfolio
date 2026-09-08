@@ -2,7 +2,7 @@ import { experience } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-blueprint/[0.03] py-24">
+    <section id="experience" className="bg-ink/[0.03] py-24">
       <div className="mx-auto max-w-3xl px-6">
         <h2 className="font-display text-3xl text-ink">Experience</h2>
         <div className="mt-10 space-y-10">

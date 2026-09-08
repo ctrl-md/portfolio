@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { profile, stats } from "@/lib/data";
+import { profile } from "@/lib/data";
 
 export default function Hero() {
   const container = {
@@ -13,19 +13,27 @@ export default function Hero() {
 
   const item = {
     hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    },
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blueprint via-blueprint to-[#1E2A52] text-paper">
+    <section className="relative overflow-hidden bg-linear-to-br from-blueprint via-blueprint to-[#1E2A52] text-paper">
       <div
         className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, #EC4899, transparent 70%)" }}
+        style={{
+          background: "radial-gradient(circle, #EC4899, transparent 70%)",
+        }}
         aria-hidden="true"
       />
       <div
         className="pointer-events-none absolute -bottom-24 left-1/3 h-72 w-72 rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, #6366F1, transparent 70%)" }}
+        style={{
+          background: "radial-gradient(circle, #6366F1, transparent 70%)",
+        }}
         aria-hidden="true"
       />
       <svg
@@ -33,8 +41,18 @@ export default function Hero() {
         aria-hidden="true"
       >
         <defs>
-          <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#FAFAF9" strokeWidth="1" />
+          <pattern
+            id="grid"
+            width="48"
+            height="48"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 48 0 L 0 0 0 48"
+              fill="none"
+              stroke="#FAFAF9"
+              strokeWidth="1"
+            />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)" />
@@ -57,10 +75,10 @@ export default function Hero() {
         </svg>
       ))}
 
-      <div className="relative mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-32">
+      <div className="relative mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] py-24 lg:py-32">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.p variants={item} className="font-sans text-sm text-amber">
-            Hi, I'm Lawson
+            Lawson Ekhorutomwen
           </motion.p>
 
           <motion.h1
@@ -70,10 +88,14 @@ export default function Hero() {
             {profile.tagline}
           </motion.h1>
 
-          <motion.p variants={item} className="mt-7 max-w-xl font-sans text-lg text-paper/75">
-            Production web and mobile apps alongside AI systems, backpropagation, retrieval,
-            computer vision, implemented from scratch, not assembled from APIs. Frontend
-            Engineer at Sendpiper, studying Medicine and Surgery at the University of Benin.
+          <motion.p
+            variants={item}
+            className="mt-7 max-w-xl font-sans text-lg text-paper/75"
+          >
+            Production web and mobile apps alongside AI systems,
+            backpropagation, retrieval, computer vision, implemented from
+            scratch, not assembled from APIs. Frontend Engineer at Sendpiper,
+            studying Medicine and Surgery at the University of Benin.
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex gap-4">
@@ -116,15 +138,6 @@ export default function Hero() {
               Download resume
             </a>
           </motion.div>
-
-          <motion.div variants={item} className="mt-12 flex gap-8 border-t border-paper/15 pt-6">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div className="font-display text-2xl text-amber">{s.value}</div>
-                <div className="mt-1 font-sans text-xs text-paper/60">{s.label}</div>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
 
         <motion.div
@@ -135,10 +148,12 @@ export default function Hero() {
         >
           <div
             className="absolute inset-0 -z-10 rounded-full opacity-40 blur-2xl"
-            style={{ background: "radial-gradient(circle, #E8A33D, transparent 65%)" }}
+            style={{
+              background: "radial-gradient(circle, #E8A33D, transparent 65%)",
+            }}
             aria-hidden="true"
           />
-          <div className="overflow-hidden rounded-2xl border-2 border-paper/15 shadow-2xl">
+          <div className="overflow-hidden rounded-full border-2 border-paper/15 shadow-2xl">
             <img
               src="/profile.jpg"
               alt="Lawson Ekhorutomwen"

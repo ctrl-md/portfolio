@@ -29,7 +29,8 @@ export const projects: Project[] = [
     metric: "TF-IDF built from scratch",
     accent: "#6366F1",
     tint: "#EEF2FF",
-    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Doctor holding a stethoscope",
   },
   {
@@ -55,7 +56,8 @@ export const projects: Project[] = [
     metric: "63-feature real-time landmark pipeline",
     accent: "#EC4899",
     tint: "#FDF2F8",
-    image: "https://images.unsplash.com/photo-1640550444366-b94e5752c479?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1640550444366-b94e5752c479?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Two hands forming a sign language gesture",
   },
   {
@@ -72,7 +74,8 @@ export const projects: Project[] = [
     metric: "Built from backprop up",
     accent: "#F59E0B",
     tint: "#FFFBEB",
-    image: "https://images.unsplash.com/photo-1569748130764-3fed0c102c59?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1569748130764-3fed0c102c59?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Computer screen filled with code",
   },
   {
@@ -89,7 +92,8 @@ export const projects: Project[] = [
     metric: "Hand-annotated ground truth",
     accent: "#10B981",
     tint: "#ECFDF5",
-    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Clinician in a white coat at a desk",
   },
   {
@@ -106,7 +110,8 @@ export const projects: Project[] = [
     metric: "0.82 AUC reproduced",
     accent: "#0EA5E9",
     tint: "#F0F9FF",
-    image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Scientist using a pipette with test tubes in a lab",
   },
   {
@@ -117,12 +122,21 @@ export const projects: Project[] = [
       "A four-part food delivery platform: a customer and vendor app, a rider app, an internal admin dashboard, and the backend API tying them together.",
     description:
       "The backend is a single REST API serving authentication, catalog, orders, payments, and policy to all three clients. The customer/vendor and rider apps are built with Expo and expo-router; the internal admin dashboard is a separate Next.js application. Each part is independently deployable and versioned as its own repository.",
-    stack: ["React Native", "Expo", "Node.js", "Express", "Prisma", "PostgreSQL", "Next.js"],
+    stack: [
+      "React Native",
+      "Expo",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Next.js",
+    ],
     codeUrl: "https://github.com/ctrl-md/food-delivery",
     metric: "4 independent apps, 1 shared API",
     accent: "#F97316",
     tint: "#FFF7ED",
-    image: "https://images.unsplash.com/photo-1598769398698-bab7f1b4cadd?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1598769398698-bab7f1b4cadd?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Delivery rider on a motorcycle",
   },
   {
@@ -133,12 +147,20 @@ export const projects: Project[] = [
       "A full-stack, Reddit-style forum: threaded posts and comments, hot-ranked voting, communities, full-text search, and a separate moderation console.",
     description:
       "The API handles auth, voting, feed ranking, and search on FastAPI and SQLAlchemy 2.0, with schema migrations managed through Alembic. The public client and the admin moderation console are two independent Vue 3 applications sharing the same backend, each with its own routing and state management.",
-    stack: ["FastAPI", "SQLAlchemy", "Alembic", "Vue 3", "Pinia", "Tailwind CSS"],
+    stack: [
+      "FastAPI",
+      "SQLAlchemy",
+      "Alembic",
+      "Vue 3",
+      "Pinia",
+      "Tailwind CSS",
+    ],
     codeUrl: "https://github.com/ctrl-md/forum",
     metric: "Hot-ranking feed algorithm",
     accent: "#14B8A6",
     tint: "#F0FDFA",
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "People meeting and discussing in a room",
   },
   {
@@ -149,12 +171,21 @@ export const projects: Project[] = [
       "A media-library web app for permanently storing images, video, and audio online for free, organized per user with pagination.",
     description:
       "The frontend uploads media directly to Cloudinary and sends only the resulting URL back to the API, keeping large binary transfer off the application server entirely. Authentication runs on JWT access and refresh tokens, with the Flask backend handling only metadata and user accounts.",
-    stack: ["Flask", "SQLAlchemy", "JWT", "React", "Vite", "Tailwind CSS", "Cloudinary"],
+    stack: [
+      "Flask",
+      "SQLAlchemy",
+      "JWT",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Cloudinary",
+    ],
     codeUrl: "https://github.com/ctrl-md/gallery",
     metric: "Direct-to-cloud upload",
     accent: "#A855F7",
     tint: "#FAF5FF",
-    image: "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?w=1200&q=80&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "Film camera near printed photos",
   },
 ];
@@ -182,7 +213,10 @@ export const skills: Skill[] = [
     ],
   },
   { category: "Languages", items: ["Python", "TypeScript / JavaScript"] },
-  { category: "Frontend", items: ["React", "Next.js", "Vue.js", "React Native / Expo"] },
+  {
+    category: "Frontend",
+    items: ["React", "Next.js", "Vue.js", "React Native / Expo"],
+  },
   { category: "Backend", items: ["FastAPI", "Flask", "Node.js / Express"] },
   {
     category: "Infrastructure",
@@ -202,7 +236,8 @@ export const experience: ExperienceEntry[] = [
   {
     role: "Frontend Engineer",
     org: "Sendpiper",
-    context: "Meta-certified messaging automation platform for WhatsApp, Instagram & Messenger",
+    context:
+      "Meta-certified messaging automation platform for WhatsApp, Instagram & Messenger",
     period: "Jul 2025 – Present",
     bullets: [
       "Built and maintain the customer-facing web application in React and Next.js, including a drag-and-drop flow builder for automated multi-channel messaging campaigns and a unified inbox for managing WhatsApp, Instagram, and Messenger conversations in one interface.",
@@ -211,20 +246,10 @@ export const experience: ExperienceEntry[] = [
   },
 ];
 
-export interface Stat {
-  value: string;
-  label: string;
-}
-
-export const stats: Stat[] = [
-  { value: "8", label: "Projects Built" },
-  { value: "5", label: "Built From Scratch" },
-  { value: "200K+", label: "Messages/Day" },
-];
-
 export const profile = {
   name: "Lawson Ekhorutomwen",
-  tagline: "Full-stack developer and AI engineer who builds from first principles.",
+  tagline:
+    "Full-stack developer and AI engineer who builds from first principles.",
   bio: "Full-stack developer and AI engineer, and a final-year medical student. Built and shipped production web and mobile applications alongside AI systems built from first principles, not course certificates: implemented backpropagation, attention, and a GPT model from scratch, reproduced a peer-reviewed clinical AI paper, and built a clinical NLP pipeline evaluated against ground truth I hand-annotated myself. Long-term focus: AI applied to medicine.",
   location: "Benin City, Edo State, Nigeria",
   email: "lawsonctrl@gmail.com",

@@ -1,15 +1,42 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-display: "Fraunces", serif;
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #1a1d23;
-  --color-blueprint: #14213d;
-  --color-blueprint-line: #2a3a5c;
+  /* Static helpers — always the same in both themes */
   --color-paper: #fafaf9;
   --color-amber: #e8a33d;
+
+  /* Theme-aware tokens — overridden under .dark below */
+  --color-canvas: #fafaf9;
+  --color-ink: #1a1d23;
   --color-slate: #6b7280;
+  --color-surface: #ffffff;
+  --color-hairline: #e5e7eb;
+  --color-blueprint: #14213d;
+  --color-blueprint-line: #2a3a5c;
+}
+
+.dark {
+  --color-canvas: #0d1117;
+  --color-ink: #e8e8e6;
+  --color-slate: #9aa4b2;
+  --color-surface: #161b22;
+  --color-hairline: #2a303c;
+  --color-blueprint: #0e1a33;
+  --color-blueprint-line: #22304e;
+  --color-amber: #f0b45f;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 html {
@@ -17,13 +44,14 @@ html {
 }
 
 body {
-  background: var(--color-paper);
+  background: var(--color-canvas);
   color: var(--color-ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
   background: var(--color-amber);
-  color: var(--color-blueprint);
+  color: #14213d;
 }
 
 @media (prefers-reduced-motion: reduce) {
