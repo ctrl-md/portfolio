@@ -10,6 +10,8 @@ export interface Project {
   metric?: string;
   accent: string;
   tint: string;
+  image: string;
+  imageAlt: string;
 }
 
 export const projects: Project[] = [
@@ -27,6 +29,8 @@ export const projects: Project[] = [
     metric: "TF-IDF built from scratch",
     accent: "#6366F1",
     tint: "#EEF2FF",
+    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Doctor holding a stethoscope",
   },
   {
     slug: "asl-translator",
@@ -51,6 +55,8 @@ export const projects: Project[] = [
     metric: "63-feature real-time landmark pipeline",
     accent: "#EC4899",
     tint: "#FDF2F8",
+    image: "https://images.unsplash.com/photo-1640550444366-b94e5752c479?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Two hands forming a sign language gesture",
   },
   {
     slug: "gpt-from-scratch",
@@ -66,6 +72,8 @@ export const projects: Project[] = [
     metric: "Built from backprop up",
     accent: "#F59E0B",
     tint: "#FFFBEB",
+    image: "https://images.unsplash.com/photo-1569748130764-3fed0c102c59?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Computer screen filled with code",
   },
   {
     slug: "clinical-nlp",
@@ -81,6 +89,8 @@ export const projects: Project[] = [
     metric: "Hand-annotated ground truth",
     accent: "#10B981",
     tint: "#ECFDF5",
+    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Clinician in a white coat at a desk",
   },
   {
     slug: "clinical-paper-reproduction",
@@ -96,6 +106,8 @@ export const projects: Project[] = [
     metric: "0.82 AUC reproduced",
     accent: "#0EA5E9",
     tint: "#F0F9FF",
+    image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Scientist using a pipette with test tubes in a lab",
   },
   {
     slug: "rave",
@@ -110,6 +122,8 @@ export const projects: Project[] = [
     metric: "4 independent apps, 1 shared API",
     accent: "#F97316",
     tint: "#FFF7ED",
+    image: "https://images.unsplash.com/photo-1598769398698-bab7f1b4cadd?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Delivery rider on a motorcycle",
   },
   {
     slug: "poseidon-forum",
@@ -124,6 +138,8 @@ export const projects: Project[] = [
     metric: "Hot-ranking feed algorithm",
     accent: "#14B8A6",
     tint: "#F0FDFA",
+    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "People meeting and discussing in a room",
   },
   {
     slug: "gallery",
@@ -138,6 +154,8 @@ export const projects: Project[] = [
     metric: "Direct-to-cloud upload",
     accent: "#A855F7",
     tint: "#FAF5FF",
+    image: "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Film camera near printed photos",
   },
 ];
 
@@ -193,15 +211,27 @@ export const experience: ExperienceEntry[] = [
   },
 ];
 
+export interface Stat {
+  value: string;
+  label: string;
+}
+
+export const stats: Stat[] = [
+  { value: "8", label: "Projects Built" },
+  { value: "5", label: "Built From Scratch" },
+  { value: "200K+", label: "Messages/Day" },
+];
+
 export const profile = {
   name: "Lawson Ekhorutomwen",
-  tagline: "Final-year medical student who builds software from first principles.",
+  tagline: "Full-stack developer and AI engineer who builds from first principles.",
   bio: "Full-stack developer and AI engineer, and a final-year medical student. Built and shipped production web and mobile applications alongside AI systems built from first principles, not course certificates: implemented backpropagation, attention, and a GPT model from scratch, reproduced a peer-reviewed clinical AI paper, and built a clinical NLP pipeline evaluated against ground truth I hand-annotated myself. Long-term focus: AI applied to medicine.",
   location: "Benin City, Edo State, Nigeria",
   email: "lawsonctrl@gmail.com",
   phone: "+234 902 156 4750",
   github: "https://github.com/ctrl-md",
   linkedin: "https://www.linkedin.com/in/lawson-ekhorutomwen-a087b6430",
+  portfolio: "https://lawsonekhorutomwen.netlify.app/",
   education: {
     degree: "Medicine and Surgery",
     school: "University of Benin (UNIBEN)",

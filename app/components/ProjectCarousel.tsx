@@ -24,7 +24,7 @@ export default function ProjectCarousel() {
         </span>
       </div>
 
-      <div className="relative mt-8 min-h-[26rem] overflow-hidden rounded-2xl">
+      <div className="relative mt-8 min-h-[42rem] overflow-hidden rounded-2xl sm:min-h-[38rem]">
         <AnimatePresence mode="wait" custom={direction} initial={false}>
           <motion.article
             key={project.slug}
@@ -34,8 +34,18 @@ export default function ProjectCarousel() {
             exit={{ opacity: 0, x: direction >= 0 ? -40 : 40 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             style={{ backgroundColor: project.tint, borderColor: project.accent }}
-            className="rounded-2xl border-2 p-8"
+            className="overflow-hidden rounded-2xl border-2"
           >
+            <div className="h-48 w-full overflow-hidden sm:h-64">
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="p-8">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <span
                 style={{ color: project.accent }}
@@ -66,7 +76,7 @@ export default function ProjectCarousel() {
                 <span
                   key={tech}
                   style={{ borderColor: project.accent, color: project.accent }}
-                  className="rounded-full border bg-white/70 px-3 py-1 font-sans text-xs font-medium"
+                  className="rounded-full border bg-white/70 px-2.5 py-1 font-sans text-xs font-medium"
                 >
                   {tech}
                 </span>
@@ -99,6 +109,7 @@ export default function ProjectCarousel() {
               {!project.liveUrl && !project.codeUrl && (
                 <span className="text-slate">Case study — link on request</span>
               )}
+            </div>
             </div>
           </motion.article>
         </AnimatePresence>
