@@ -81,7 +81,7 @@ export default function ProjectCarousel() {
         </button>
 
         {/* Fixed-size full-width stage */}
-        <div className="relative h-136 w-full overflow-hidden border-y border-hairline bg-surface sm:h-150">
+        <div className="relative h-136 w-full overflow-hidden border-y border-hairline bg-surface sm:h-120">
           <AnimatePresence mode="wait" custom={direction} initial={false}>
             <motion.article
               key={project.slug}
