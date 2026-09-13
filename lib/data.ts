@@ -232,6 +232,8 @@ export const skills: Skill[] = [
       "LLM Training (GPT)",
       "LoRA Fine-Tuning",
       "Retrieval-Augmented Generation (RAG)",
+      "Multi-Agent Systems & LLM Orchestration (LangGraph, LangChain, Groq)",
+      "Speech-to-Text & Speaker Diarization (Whisper, pyannote.audio)",
       "Explainable AI (SHAP, Grad-CAM, Integrated Gradients)",
       "Clinical NLP & Named Entity Recognition",
       "Computer Vision (MediaPipe, OpenCV)",
@@ -244,7 +246,10 @@ export const skills: Skill[] = [
     category: "Frontend",
     items: ["React", "Next.js", "Vue.js", "React Native / Expo"],
   },
-  { category: "Backend", items: ["FastAPI", "Flask", "Node.js / Express"] },
+  {
+    category: "Backend",
+    items: ["FastAPI", "Flask", "Node.js / Express", "SQLAlchemy"],
+  },
   {
     category: "Infrastructure",
     items: ["AWS", "Google Cloud Platform (GCP)", "PostgreSQL", "Docker"],
@@ -277,7 +282,7 @@ export const profile = {
   name: "Lawson Ekhorutomwen",
   tagline:
     "Full-stack developer and AI engineer who builds from first principles.",
-  bio: "Full-stack developer and AI engineer, and a final-year medical student. Built and shipped production web and mobile applications alongside AI systems built from first principles, not course certificates: implemented backpropagation, attention, and a GPT model from scratch, reproduced a peer-reviewed clinical AI paper, and built a clinical NLP pipeline evaluated against ground truth I hand-annotated myself. Long-term focus: AI applied to medicine.",
+  bio: "Full-stack developer and AI engineer, and a final-year medical student. Built and shipped production web and mobile applications alongside AI systems built from first principles, not course certificates: implemented backpropagation, attention, and a GPT model from scratch, reproduced a peer-reviewed clinical AI paper, built a clinical NLP pipeline evaluated against ground truth I hand-annotated myself, and built a multi-agent clinical scribe that verifies its own AI-generated notes before a doctor sees them. Long-term focus: AI applied to medicine.",
   location: "Benin City, Edo State, Nigeria",
   email: "lawsonctrl@gmail.com",
   phone: "+234 902 156 4750",
