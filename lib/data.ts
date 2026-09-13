@@ -16,6 +16,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "ai-clinical-scribe",
+    title: "AI Clinical Scribe",
+    category: "AI & Machine Learning",
+    summary:
+      "A multi-agent pipeline that turns a doctor-patient consult recording into a reviewed, editable SOAP note, with every AI claim checked against the transcript before a doctor sees it.",
+    description:
+      "Whisper transcription and pyannote.audio speaker diarization feed a LangGraph extraction agent, which is checked by a separate QA agent and validator agent before a doctor reviews and finalizes the note. Controlled testing with deliberately planted errors showed a single QA pass caught real issues inconsistently across identical runs; running three passes and combining the flags measurably improved recall. FastAPI backend, PostgreSQL with a full field-level edit history separate from the original AI output, React/TypeScript/Tailwind review interface with live mic recording.",
+    stack: [
+      "LangGraph",
+      "LangChain",
+      "Groq",
+      "Whisper",
+      "pyannote.audio",
+      "FastAPI",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    codeUrl: "https://github.com/ctrl-md/ai-clinical-scribe",
+    metric: "QA recall: single-pass inconsistent → 3-pass reliable",
+    accent: "#DC2626",
+    tint: "#FEF2F2",
+    image:
+      "https://images.unsplash.com/photo-1758691462814-485c3672e447?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "Doctor's hand writing in a patient's medical chart",
+  },
+  {
     slug: "ground",
     title: "Ground — Full-Stack Medical RAG Assistant",
     category: "AI & Machine Learning",
