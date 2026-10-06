@@ -116,14 +116,14 @@ export default function ProjectCarousel() {
               </div>
 
               {/* Content */}
-              <div className="relative flex h-full flex-col overflow-y-auto px-6 py-7 sm:px-10 md:px-12 md:py-10">
+              <div className="relative flex h-full flex-col px-6 py-7 sm:px-10 md:px-12 md:py-10">
                 <span
                   aria-hidden="true"
                   className="absolute left-0 top-0 h-full w-1"
                   style={{ backgroundColor: project.accent }}
                 />
 
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex items-start justify-between gap-3 overflow-y-auto">
                   <h3 className="font-display text-xl leading-tight text-ink sm:text-2xl">
                     {project.title}
                   </h3>
