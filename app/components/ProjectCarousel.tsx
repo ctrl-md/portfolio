@@ -116,99 +116,100 @@ export default function ProjectCarousel() {
               </div>
 
               {/* Content */}
-              <div className="relative flex h-full flex-col px-6 py-7 sm:px-10 md:px-12 md:py-10">
+              <div className="relative flex h-full">
                 <span
                   aria-hidden="true"
                   className="absolute left-0 top-0 h-full w-1"
                   style={{ backgroundColor: project.accent }}
                 />
-
-                <div className="flex items-start justify-between gap-3 overflow-y-auto">
-                  <h3 className="font-display text-xl leading-tight text-ink sm:text-2xl">
-                    {project.title}
-                  </h3>
-                  {project.metric && (
-                    <span
-                      style={{ backgroundColor: project.accent }}
-                      className="shrink-0 rounded-full px-3 py-1 font-sans text-[0.7rem] font-medium text-white shadow-sm"
-                    >
-                      {project.metric}
-                    </span>
-                  )}
-                </div>
-
-                <p className="mt-3 font-sans text-[0.95rem] leading-relaxed text-ink/80">
-                  {project.summary}
-                </p>
-                <p className="mt-3 font-sans text-[0.88rem] leading-relaxed text-slate">
-                  {project.description}
-                </p>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      style={{
-                        borderColor: `${project.accent}55`,
-                        color: project.accent,
-                      }}
-                      className="rounded-full border bg-surface px-2.5 py-1 font-sans text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-auto flex flex-wrap gap-5 pt-6 font-sans text-sm font-medium">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: project.accent }}
-                      className="inline-flex items-center gap-1 underline decoration-2 underline-offset-4 hover:opacity-70"
-                    >
-                      Live site
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="h-3.5 w-3.5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                <div className="h-full overflow-y-auto flex-col px-6 py-7 sm:px-10 md:px-12 md:py-10">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display text-xl leading-tight text-ink sm:text-2xl">
+                      {project.title}
+                    </h3>
+                    {project.metric && (
+                      <span
+                        style={{ backgroundColor: project.accent }}
+                        className="shrink-0 rounded-full px-3 py-1 font-sans text-[0.7rem] font-medium text-white shadow-sm"
                       >
-                        <path d="M7 17L17 7M7 7h10v10" />
-                      </svg>
-                    </a>
-                  )}
-                  {project.codeUrl && (
-                    <a
-                      href={project.codeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: project.accent }}
-                      className="inline-flex items-center gap-1 underline decoration-2 underline-offset-4 hover:opacity-70"
-                    >
-                      Source code
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="h-3.5 w-3.5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        {project.metric}
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="mt-3 font-sans text-[0.95rem] leading-relaxed text-ink/80">
+                    {project.summary}
+                  </p>
+                  <p className="mt-3 font-sans text-[0.88rem] leading-relaxed text-slate">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        style={{
+                          borderColor: `${project.accent}55`,
+                          color: project.accent,
+                        }}
+                        className="rounded-full border bg-surface px-2.5 py-1 font-sans text-xs font-medium"
                       >
-                        <path d="M7 17L17 7M7 7h10v10" />
-                      </svg>
-                    </a>
-                  )}
-                  {!project.liveUrl && !project.codeUrl && (
-                    <span className="text-slate">
-                      Case study — link on request
-                    </span>
-                  )}
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto flex flex-wrap gap-5 pt-6 font-sans text-sm font-medium">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: project.accent }}
+                        className="inline-flex items-center gap-1 underline decoration-2 underline-offset-4 hover:opacity-70"
+                      >
+                        Live site
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="h-3.5 w-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M7 17L17 7M7 7h10v10" />
+                        </svg>
+                      </a>
+                    )}
+                    {project.codeUrl && (
+                      <a
+                        href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: project.accent }}
+                        className="inline-flex items-center gap-1 underline decoration-2 underline-offset-4 hover:opacity-70"
+                      >
+                        Source code
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="h-3.5 w-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M7 17L17 7M7 7h10v10" />
+                        </svg>
+                      </a>
+                    )}
+                    {!project.liveUrl && !project.codeUrl && (
+                      <span className="text-slate">
+                        Case study — link on request
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.article>
