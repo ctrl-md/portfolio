@@ -51,7 +51,7 @@ export const projects: Project[] = [
       "A full-stack RAG assistant that answers health questions using only cited MedlinePlus sources, never general model knowledge.",
     description:
       "Retrieval is TF-IDF and cosine similarity built from scratch in PyTorch, no embedding API or vector database, with a hybrid fallback for short queries too common across the corpus to score well. Generation hands retrieved documents to an LLM as numbered sources with strict instructions: answer only from them, cite every claim, use non-diagnostic language, and recommend a real healthcare provider.",
-    stack: ["FastAPI", "PyTorch", "Next.js", "TypeScript", "Gemini API"],
+    stack: ["FastAPI", "PyTorch", "Next.js", "TypeScript", "Groq"],
     codeUrl: "https://github.com/ctrl-md/medical-rag-assistant",
     metric: "TF-IDF built from scratch",
     accent: "#6366F1",
